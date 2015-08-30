@@ -17,8 +17,8 @@ public class NewContactCreation extends TestBase {
 
   @org.testng.annotations.Test
   public void addNewNotEmptyContact() throws Exception {
-	openMainPage();
-    gotoAddNewContactPage();
+	app.getNavigationHelper().openMainPage();
+    app.getContactHelper().initContactCreation();
     ContactData contactObject = new ContactData();
     contactObject.firstname = "Max";
     contactObject.lastname = "Braun";
@@ -34,23 +34,20 @@ public class NewContactCreation extends TestBase {
     contactObject.groupfield = "group1";
     contactObject.optionaladdress = "secondary address";
     contactObject.optionalhomephone = "112";
-  //NOT EMPTY day, month, year, groupfield
-	fillContactEntry(contactObject);
-    submitContactCreation();
-    returnToHomePage();
+	app.getContactHelper().fillContactEntry(contactObject);
+    app.getContactHelper().submitContactCreation();
+    app.getContactHelper().returnToHomePage();
   }
 
   @org.testng.annotations.Test
   public void addNewEmptyContact() throws Exception {
-	openMainPage();
-    gotoAddNewContactPage();
-    ContactData contactObject = new ContactData("", "", "", "", "", "", "", "",  "", "", "", "", "", "");
-    //!!!because of EMPTY day, month, year, groupfield
-	fillContactEntryEmpty(contactObject);
-    submitContactCreation();
-    returnToHomePage();
+	app.getNavigationHelper().openMainPage();
+    app.getContactHelper().initContactCreation();
+    ContactData contactObject = new ContactData("", "", "", "", "", "", "", "",  "-", "-", "", "", "", "");
+	app.getContactHelper().fillContactEntry(contactObject);
+    app.getContactHelper().submitContactCreation();
+    app.getContactHelper().returnToHomePage();
   }
-  
   
 
 }
