@@ -1,16 +1,12 @@
 package com.example.tests;
 
-import java.util.regex.Pattern;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.*;
+import java.util.Collections;
+import java.util.List;
 
 import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-
-import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+
+import static org.testng.Assert.assertEquals;
 
 public class NewContactCreation extends TestBase {
 
@@ -18,6 +14,10 @@ public class NewContactCreation extends TestBase {
   @org.testng.annotations.Test
   public void addNewNotEmptyContact() throws Exception {
 	app.getNavigationHelper().openMainPage();
+	
+	//save old state
+	List<ContactData> oldList = app.getContactHelper().getContacts();
+	//actions
     app.getContactHelper().initContactCreation();
     ContactData contactObject = new ContactData();
     contactObject.firstname = "Max";
@@ -37,16 +37,36 @@ public class NewContactCreation extends TestBase {
 	app.getContactHelper().fillContactEntry(contactObject);
     app.getContactHelper().submitContactCreation();
     app.getContactHelper().returnToHomePage();
+    
+    //save new state
+    List<ContactData> newList = app.getContactHelper().getContacts();
+    //compare states
+    //assertEquals(newList.size(), oldList.size() + 1);
+    oldList.add(contactObject);
+    Collections.sort(oldList);
+    assertEquals(newList, oldList);
   }
 
+  
+  
   @org.testng.annotations.Test
   public void addNewEmptyContact() throws Exception {
 	app.getNavigationHelper().openMainPage();
+	//save old state
+		List<ContactData> oldList = app.getContactHelper().getContacts();
+		//actions
+	ContactData contactObject = new ContactData("", "", "", "", "", "", "", "",  "-", "-", "", "", "", "");
     app.getContactHelper().initContactCreation();
-    ContactData contactObject = new ContactData("", "", "", "", "", "", "", "",  "-", "-", "", "", "", "");
-	app.getContactHelper().fillContactEntry(contactObject);
+    app.getContactHelper().fillContactEntry(contactObject);
     app.getContactHelper().submitContactCreation();
     app.getContactHelper().returnToHomePage();
+    
+  //save new state
+    List<ContactData> newList = app.getContactHelper().getContacts();
+    //compare states
+    oldList.add(contactObject);
+    Collections.sort(oldList);
+    assertEquals(newList, oldList);
   }
   
 
