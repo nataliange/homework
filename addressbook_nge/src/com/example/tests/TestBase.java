@@ -50,5 +50,37 @@ public class TestBase {
 			return "test" + rnd.nextInt();
 		} 
 	}
+	
+	@DataProvider
+	public Iterator<Object[]>randomValidContactGenerator(){
+		List<Object[]> list = new ArrayList<Object[]>();
+				for (int i = 0; i < 5; i++){
+			ContactData contactObject = new ContactData();
+			contactObject.firstname = generateRandomString();
+		    contactObject.lastname = generateRandomString();
+		    contactObject.address = generateRandomString();
+		    contactObject.homephone = generateRandomString();
+		    contactObject.mobilephone = generateRandomString();
+		    contactObject.workphone = generateRandomString();
+		    contactObject.mail1 = generateRandomString();
+		    contactObject.mail2 = generateRandomString();
+		    //contactObject.bday = generateRandomString();
+		    //contactObject.bmonth = generateRandomString();
+		    //contactObject.byear = generateRandomString();
+		    contactObject.groupfield = generateRandomString();
+		    contactObject.optionaladdress = generateRandomString();
+		    contactObject.optionalhomephone = generateRandomString();
+			list.add(new Object[]{contactObject});
+		}
+		return list.iterator();
+	}
+	public String generateRandomString1(){
+		Random rnd = new Random();
+		if (rnd.nextInt(3) == 0) {
+			return "";
+			} else {
+				return "test" + rnd.nextInt();
+			}
+	}
 
 }

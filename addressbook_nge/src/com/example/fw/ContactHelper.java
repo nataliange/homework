@@ -47,11 +47,9 @@ public class ContactHelper extends HelperBase {
 		click(By.linkText("home page"));
 	}
 
-	// //////////////////////////////////////////////
+
 	public void initContactModification(int index) {
-		click(By.xpath("//input[@name='selected[]'][" + (index+1) + "]"));
-		// click(By.xpath("//img[@title='Edit[]'][" + index + "]"));
-		click(By.xpath("//img[starts-with(@title, 'Edit')]"));
+		click(By.xpath("//tr[@name='entry'][" + (index+1) + "]/td/a/img[@title='Edit']"));
 	}
 
 	public void deleteContact() {
@@ -70,13 +68,23 @@ public class ContactHelper extends HelperBase {
 		for (WebElement checkbox : checkboxes) {
 			ContactData contactObject = new ContactData();
 			String title = checkbox.getAttribute("title");
-			contactObject.lastname = title.substring("Select (".length(), title.length() - ")".length());
 			//contactObject.lastname = title.substring(title.indexOf("Select (Max" + 1, title.indexOf(")")));
-			
-
+			contactObject.lastname = title.substring("Select (".length(), title.length());
 			contactObjects.add(contactObject);
 		}
 		return contactObjects;
 	}
+	
+/*	public List<ContactData> getContacts() {
+		List<ContactData> contactObjects = new ArrayList<ContactData>();
+		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
+		for (WebElement checkbox : checkboxes) {
+			ContactData contactObject = new ContactData();
+			String accept = checkbox.getAttribute("accept");
+			contactObject.mail1 = accept.substring(accept.indexOf("\"") +1, accept.indexOf(";")); 
+			contactObjects.add(contactObject);
+		}
+		return contactObjects;
+	}*/
 
 }
