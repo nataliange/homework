@@ -1,4 +1,6 @@
 package com.example.tests;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.Matchers.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,32 +13,28 @@ import static org.junit.Assert.*;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.DataProvider;
 
+import utils.SortedListOf;
+import static com.example.fw.ContactHelper.CREATION;
 import static org.testng.Assert.assertEquals;
 
-public class NewContactCreation extends TestBase {
-
+public class ContactCreation extends TestBase {
 
 	
   @org.testng.annotations.Test (dataProvider = "randomValidContactGenerator")
   public void contactCreationWithValidData(ContactData contactObject) throws Exception {
-	app.getNavigationHelper().openMainPage();
 	
 	//save old state
-	List<ContactData> oldList = app.getContactHelper().getContacts();
+	 SortedListOf<ContactData> oldList = app.getContactHelper().getContacts();
 	//actions
-    app.getContactHelper().initContactCreation();
-    
-	app.getContactHelper().fillContactEntry(contactObject);
-    app.getContactHelper().submitContactCreation();
-    app.getContactHelper().returnToHomePage();
-    
+	app.getContactHelper().createContact(contactObject, CREATION);
+	
+	
     //save new state
-    List<ContactData> newList = app.getContactHelper().getContacts();
+	SortedListOf<ContactData> newList = app.getContactHelper().getContacts();
+	
     //compare states
-    oldList.add(contactObject);
-    Collections.sort(oldList);
-    assertEquals(newList, oldList);
+	assertThat(newList, equalTo(oldList.withAdded(contactObject)));
+
   }
- 
 
 }

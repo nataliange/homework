@@ -10,7 +10,13 @@ import java.util.Random;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import utils.SortedListOf;
+
+import com.example.fw.GroupHelper;
+
 import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.Matchers.*;
 
 public class GroupCreation extends TestBase {
 	
@@ -18,28 +24,20 @@ public class GroupCreation extends TestBase {
 	
   @Test(dataProvider = "randomValidGroupGenerator")
   public void testGroupCreationWithValidData(GroupData group) throws Exception {
-    app.getNavigationHelper().openMainPage();
-    app.getNavigationHelper().gotoGroupsPage();
-    
+	  
     //save old state
-    List<GroupData> oldList = app.getGroupHelper().getGroups();
+	  SortedListOf<GroupData> oldList = app.getGroupHelper().getGroups();
     
     //actions
-    
-    app.getGroupHelper().initGroupCreation();
-    
-	app.getGroupHelper().fillGroupForm(group);
-    app.getGroupHelper().submitGroupCreatioin();
-    app.getGroupHelper().returnToGroupsPage();
-    
+	app.getGroupHelper().createGroup(group);
+ 
     //save new state
-    List<GroupData> newList = app.getGroupHelper().getGroups();
+	SortedListOf<GroupData> newList = app.getGroupHelper().getGroups();
     //compare states (size)
     //assertEquals(newList.size(), oldList.size() +1);
+	
     //compare contents
-    oldList.add(group);
-    Collections.sort(oldList);
-    assertEquals(newList, oldList);
+	assertThat(newList, equalTo(oldList.withAdded(group)));
     
   }
 
