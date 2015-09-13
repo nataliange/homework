@@ -49,19 +49,6 @@ cachedContacts = new SortedListOf<ContactData>();
 	}
 	
 	
-/*		private void rebuildCache() {
-cachedContacts = new SortedListOf<ContactData>();
-
-		manager.navigateTo().mainPage();
-		List<WebElement> checkboxes = driver
-				.findElements(By.name("selected[]"));
-		for (WebElement checkbox : checkboxes) {
-			String title = checkbox.getAttribute("title");
-			String lastname = title.substring("Select (".length(), title.length());
-			cachedContacts.add(new ContactData().withLastname(lastname));
-		}
-	}*/
-	
 	
 
 	public ContactHelper createContact(ContactData contactObject, boolean CREATION) {
