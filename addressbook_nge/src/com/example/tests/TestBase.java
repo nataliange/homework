@@ -1,8 +1,11 @@
 package com.example.tests;
 
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Properties;
 import java.util.Random;
 
 import org.testng.annotations.AfterTest;
@@ -11,13 +14,19 @@ import org.testng.annotations.DataProvider;
 
 import com.example.fw.ApplicationManager;
 
+import static com.example.tests.GroupDataGenerator.generateRandomGroups;
+import static com.example.tests.ContactDataGenerator.generateRandomContacts;
+
 public class TestBase {
 	
 	protected ApplicationManager app;
 
 	@BeforeTest
 	public void setUp() throws Exception {
-		app = new ApplicationManager();
+		String configFile = System.getProperty("configfile", "application.properties");
+		Properties properties = new Properties();
+		properties.load(new FileReader(new File(configFile)));
+		app = new ApplicationManager(properties);
 	    
 	  }
 
@@ -27,59 +36,23 @@ public class TestBase {
 	    
 	  }
 	
-	@DataProvider
-	public Iterator<Object[]> randomValidGroupGenerator(){
+	
+	public static List<Object[]> wrapGroupsForDataProvider(List<GroupData> groups) {
 		List<Object[]> list = new ArrayList<Object[]>();
-		for (int i = 0; i<5; i++){
-			GroupData group = new GroupData()
-			.withGroupname(generateRandomString())
-			.withHeader(generateRandomString())
-			.withFooter(generateRandomString());
+		for (GroupData group : groups) {
 			list.add(new Object[]{group});
 		}
-		return list.iterator();
+		return list;
 	}
-	
-	public String generateRandomString(){
-		Random rnd = new Random();
-		if (rnd.nextInt(3) == 0) {
-			return "";
-		} else {
-			return "test" + rnd.nextInt();
-		} 
-	}
-	
-	@DataProvider
-	public Iterator<Object[]>randomValidContactGenerator(){
+/////////////////////////////////////////
+
+	public static List<Object[]> wrapContactsForDataProvider(List<ContactData> contactObjects) {
 		List<Object[]> list = new ArrayList<Object[]>();
-				for (int i = 0; i < 5; i++){
-			ContactData contactObject = new ContactData()
-			.withFirstname(generateRandomString())
-			.withLastname(generateRandomString())
-			.withAddress(generateRandomString())
-			.withHomephone(generateRandomString())
-			.withMobilephone(generateRandomString())
-			.withWorkphone(generateRandomString())
-			.withMail1(generateRandomString())
-			.withMail2(generateRandomString())
-			//.withBday(generateRandomString())//
-			//.withBmonth(generateRandomString())//
-			//.withByear(generateRandomString())//
-			.withGroupfield(generateRandomString())
-			.withOptionaladdress(generateRandomString())
-			.withOptionalhomephone(generateRandomString());
-			
-			list.add(new Object[]{contactObject});
+		for(ContactData contactObject : contactObjects) {
+			list.add(new Object[] {contactObject});
 		}
-		return list.iterator();
+		return list;
 	}
-	public String generateRandomString1(){
-		Random rnd = new Random();
-		if (rnd.nextInt(3) == 0) {
-			return "";
-			} else {
-				return "test" + rnd.nextInt();
-			}
-	}
+
 
 }

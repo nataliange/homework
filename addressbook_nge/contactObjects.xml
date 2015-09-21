@@ -1,0 +1,36 @@
+<list>
+  <contactObject>
+    <firstname>nge
+    nge
+    nge
+    </firstname>
+    <lastname>nge
+    nge
+    nge
+    </lastname>
+    <address>test357753852
+    nge
+    nge</address>
+    <homephone>test1880879422</homephone>
+    <mobilephone>test1595331851</mobilephone>
+    <workphone></workphone>
+    <mail1>test-1139659580</mail1>
+    <mail2>test-1450881865</mail2>
+    <groupfield>test-826659051</groupfield>
+    <optionaladdress>test-1442493042</optionaladdress>
+    <optionalhomephone>test1666446505</optionalhomephone>
+  </contactObject>
+  <contactObject>
+    <firstname>test-1554199616</firstname>
+    <lastname></lastname>
+    <address></address>
+    <homephone>test590203360</homephone>
+    <mobilephone>test983426467</mobilephone>
+    <workphone>test-1039121463</workphone>
+    <mail1></mail1>
+    <mail2>test1000227991</mail2>
+    <groupfield></groupfield>
+    <optionaladdress></optionaladdress>
+    <optionalhomephone>test1810875896</optionalhomephone>
+  </contactObject>
+</list>

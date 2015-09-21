@@ -12,7 +12,7 @@ public abstract class HelperBase {
 	protected ApplicationManager manager;
 	protected WebDriver driver;
 	public boolean acceptNextAlert = true;
-//ctrl+1
+
 	public HelperBase (ApplicationManager manager) {
 		this.manager = manager;
 		this.driver = manager.driver;

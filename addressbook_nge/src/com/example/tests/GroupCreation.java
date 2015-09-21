@@ -1,6 +1,8 @@
 package com.example.tests;
 
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -14,15 +16,22 @@ import utils.SortedListOf;
 
 import com.example.fw.GroupHelper;
 
+
+import static com.example.tests.GroupDataGenerator.loadGroupsFromCsvFile;
+import static com.example.tests.GroupDataGenerator.loadGroupsFromXmlFile;
 import static org.testng.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 public class GroupCreation extends TestBase {
 	
+	@DataProvider
+	public Iterator<Object[]> groupsFromFile() throws IOException {
+		return wrapGroupsForDataProvider(loadGroupsFromXmlFile(new File("groups.xml"))).iterator();
+	}
 	
-	
-  @Test(dataProvider = "randomValidGroupGenerator")
+
+@Test(dataProvider = "groupsFromFile")
   public void testGroupCreationWithValidData(GroupData group) throws Exception {
 	  
     //save old state

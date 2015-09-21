@@ -28,7 +28,7 @@ public class ContactModificationTests extends TestBase {
 		Random rnd = new Random();
 		int index = rnd.nextInt(oldList.size()-1);
 		//actions
-		app.getContactHelper().modifyContact(index, contactObject, MODIFICATION);
+		app.getContactHelper().modifyContact(index, contactObject);
 
 		
 		  //save new state

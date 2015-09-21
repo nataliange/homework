@@ -2,31 +2,37 @@ package com.example.tests;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.*;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Random;
 
-import static org.junit.Assert.*;
-
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.DataProvider;
 
 import utils.SortedListOf;
 import static com.example.fw.ContactHelper.CREATION;
-import static org.testng.Assert.assertEquals;
+import static com.example.tests.ContactDataGenerator.generateRandomContacts;
+import static com.example.tests.ContactDataGenerator.loadContactsFromCsvFile;
+import static com.example.tests.ContactDataGenerator.loadContactsFromXmlFile;
+
 
 public class ContactCreation extends TestBase {
+	
+	@DataProvider
+	public Iterator<Object[]>contactsFromFile() throws IOException{
+		return wrapContactsForDataProvider(loadContactsFromXmlFile(new File("contactObjects.xml"))).iterator();
+	}
 
 	
-  @org.testng.annotations.Test (dataProvider = "randomValidContactGenerator")
+@org.testng.annotations.Test (dataProvider = "contactsFromFile")
   public void contactCreationWithValidData(ContactData contactObject) throws Exception {
 	
 	//save old state
 	 SortedListOf<ContactData> oldList = app.getContactHelper().getContacts();
 	//actions
-	app.getContactHelper().createContact(contactObject, CREATION);
+	app.getContactHelper().createContact(contactObject);
 	
 	
     //save new state
