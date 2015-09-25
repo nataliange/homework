@@ -1,0 +1,1 @@
+java -classpath ./bin com.example.tests.ContactDataGenerator 10 contactObjects.txt csv

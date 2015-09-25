@@ -38,7 +38,7 @@ public class ContactHelper extends HelperBase {
 	private void rebuildCache() {
 cachedContacts = new SortedListOf<ContactData>();
 		manager.navigateTo().mainPage();
-		List<WebElement> rows = driver.findElements(By.xpath("//tr[@name='entry']/td[3]"));
+		List<WebElement> rows = driver.findElements(By.xpath("//tr[@name='entry']"));
 		for (WebElement row : rows) {
 			List<WebElement> cells = row.findElements(By.tagName("td"));
 			String firstname = cells.get(1).getText();

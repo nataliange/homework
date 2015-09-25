@@ -36,7 +36,7 @@ public class ApplicationManager {
 	    baseUrl = properties.getProperty("baseUrl");
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    
-		System.setProperty("webdriver.ie.driver", "C:\\Users\\Nata\\IEDriverServer.exe");
+		//System.setProperty("webdriver.ie.driver", "C:\\Users\\Nata\\IEDriverServer.exe");
 	    //WebDriver driver=new InternetExplorerDriver(); 
 	    
 		driver.get(baseUrl);
