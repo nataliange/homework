@@ -97,7 +97,7 @@ public class ContactData implements Comparable<ContactData> {
 
 	@Override
 	public String toString() {
-		return "ContactData [lastname=" + lastname + "]";
+		return "ContactData [firstname=" + firstname + "]";
 	}
 
 	@Override
@@ -105,7 +105,7 @@ public class ContactData implements Comparable<ContactData> {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((lastname == null) ? 0 : lastname.hashCode());
+				+ ((firstname == null) ? 0 : firstname.hashCode());
 		return result;
 	}
 
@@ -118,10 +118,10 @@ public class ContactData implements Comparable<ContactData> {
 		if (getClass() != obj.getClass())
 			return false;
 		ContactData other = (ContactData) obj;
-		if (lastname == null) {
-			if (other.lastname != null)
+		if (firstname == null) {
+			if (other.firstname != null)
 				return false;
-		} else if (!lastname.equals(other.lastname))
+		} else if (!firstname.equals(other.firstname))
 			return false;
 		return true;
 	}

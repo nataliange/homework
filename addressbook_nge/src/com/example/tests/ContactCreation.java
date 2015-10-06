@@ -18,7 +18,7 @@ import static com.example.tests.ContactDataGenerator.loadContactsFromCsvFile;
 import static com.example.tests.ContactDataGenerator.loadContactsFromXmlFile;
 
 
-public class ContactCreation extends TestBase {
+public class ContactCreation extends TestBase { 
 	
 	@DataProvider
 	public Iterator<Object[]>contactsFromFile() throws IOException{

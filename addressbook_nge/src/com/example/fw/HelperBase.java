@@ -7,7 +7,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public abstract class HelperBase {
+public abstract class HelperBase { 
 	
 	protected ApplicationManager manager;
 	protected WebDriver driver;
