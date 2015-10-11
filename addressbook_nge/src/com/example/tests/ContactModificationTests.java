@@ -23,12 +23,15 @@ public class ContactModificationTests extends TestBase {
 
 		//save old state
 		
-		SortedListOf<ContactData> oldList = app.getContactHelper().getContacts();
+		SortedListOf<ContactData> oldList 
+		= new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());
 		
 		Random rnd = new Random();
 		int index = rnd.nextInt(oldList.size()-1);
 		//actions
 		app.getContactHelper().modifyContact(index, contactObject);
+		//+++
+		contactObject.setId(oldList.get(index).getId());
 
 		
 		  //save new state

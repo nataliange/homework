@@ -17,7 +17,7 @@ import java.util.List;
 import static com.example.fw.ContactHelper.CREATION;
 import static com.example.fw.ContactHelper.MODIFICATION;
 
-public class ContactHelper extends HelperBase {
+public class ContactHelper extends WebDriverHelperBase {
 	
 	public static boolean CREATION = true;
 	public static boolean MODIFICATION = false;
@@ -41,23 +41,10 @@ cachedContacts = new SortedListOf<ContactData>();
 		List<WebElement> rows = driver.findElements(By.xpath("//tr[@name='entry']"));
 		for (WebElement row : rows) {
 			List<WebElement> cells = row.findElements(By.tagName("td"));
-			String firstname = cells.get(1).getText();
+			String firstname = cells.get(2).getText();
 			cachedContacts.add(new ContactData().withFirstname(firstname));
 		}
 	}
-	
-/*	public List<ContactData> getContacts() {
-		List<ContactData> contactObjects = new ArrayList<ContactData>();
-		
-	List<WebElement> rows = driver.findElements(By.xpath("//tr[@name='entry']/td[3]"));
-	for (WebElement row : rows) {
-		ContactData contactObject = new ContactData();
-	  List<WebElement> cells = row.findElements(By.tagName("td"));
-	  contactObject.firstname = cells.get(1).getText();
-	  contactObjects.add(contactObject);
-	}
-	return contactObjects;
-}*/
 	
 
 	public ContactHelper createContact(ContactData contactObject) {
@@ -80,8 +67,15 @@ cachedContacts = new SortedListOf<ContactData>();
 	}
 	
 	public ContactHelper deleteContact(int index) {
-
 		initContactModification(index);
+		submitContactDeletion();
+		returnToHomePage();
+		rebuildCache();
+		return this;
+	}
+	//++
+	public ContactHelper deleteContactById(String id) {
+		initContactModificationByIndex(id);
 		submitContactDeletion();
 		returnToHomePage();
 		rebuildCache();
@@ -90,6 +84,12 @@ cachedContacts = new SortedListOf<ContactData>();
 	}
 
 	//-------------------------------------------------------------------------
+	
+	//+++
+	private ContactHelper initContactModificationByIndex(String id) {
+		click(By.xpath("//tr[@name='entry']/td/a/img[@title='Edit']"));
+		return this;
+	}
 	
 	public ContactHelper initContactCreation() {
 		click(By.linkText("add new"));
@@ -154,4 +154,6 @@ cachedContacts = new SortedListOf<ContactData>();
 		cachedContacts = null;
 		return this;
 	}
+
+
 }

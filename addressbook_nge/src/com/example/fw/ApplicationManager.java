@@ -12,40 +12,29 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class ApplicationManager {
 	
-	public WebDriver driver;
+	private WebDriver driver;
 	public String baseUrl;
 	private StringBuffer verificationErrors = new StringBuffer();
 	
 	private NavigationHelper navigationHelper;
 	private GroupHelper groupHelper;
 	private ContactHelper contactHelper;
+	private HibernateHelper hibernateHelper;
 	private Properties properties;
-	
+	private ApplicationModel model;
 	
 	public ApplicationManager(Properties properties)	{
 		this.properties = properties;
-		String browser = properties.getProperty("browser");
-		if ("firefox".equals(browser)){
-			driver = new FirefoxDriver();
-		} else if ("ie".equals(browser)) {
-			driver = new InternetExplorerDriver();
-		} else {
-			throw new Error("Unsupported browser: " + browser);
-		}
-		
-	    baseUrl = properties.getProperty("baseUrl");
-	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	    
-		//System.setProperty("webdriver.ie.driver", "C:\\Users\\Nata\\IEDriverServer.exe");
-	    //WebDriver driver=new InternetExplorerDriver(); 
-	    
-		driver.get(baseUrl);
-	    driver.manage().window().maximize();   
+		model = new ApplicationModel();
+		model.setGroups(getHibernateHelper().listGroups());
 	}
 	
 	public void stop() {
 		driver.quit();
-		
+	}
+	
+	public ApplicationModel getModel() {
+		return model;
 	}
 
 	public NavigationHelper navigateTo() {
@@ -68,5 +57,39 @@ public class ApplicationManager {
 		}
 		return contactHelper;
 	}
+	
+	public HibernateHelper getHibernateHelper() {
+		if (hibernateHelper==null) {
+			hibernateHelper = new HibernateHelper(this);
+		}
+		return hibernateHelper;	
+	}
+
+	public WebDriver getDriver() {
+		String browser = properties.getProperty("browser");
+		if (driver == null) {
+			if ("firefox".equals(browser)){
+				driver = new FirefoxDriver();
+			} else if ("ie".equals(browser)) {
+				driver = new InternetExplorerDriver();
+			} else {
+				throw new Error("Unsupported browser: " + browser);
+			}
+		    baseUrl = properties.getProperty("baseUrl");
+		    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//System.setProperty("webdriver.ie.driver", "C:\\Users\\Nata\\IEDriverServer.exe");
+		    //WebDriver driver=new InternetExplorerDriver();   
+			driver.get(baseUrl);
+		    driver.manage().window().maximize();  
+		}
+		return driver;	
+}
+	public String getProperty(String key) {
+		return properties.getProperty(key);
+	}
+
 
 }
+
+
+

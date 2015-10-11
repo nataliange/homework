@@ -100,5 +100,4 @@ public class GroupDataGenerator {
 			return "test" + rnd.nextInt();
 		} 
 	}
-
 }

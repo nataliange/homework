@@ -1,6 +1,7 @@
 package com.example.tests;
 
 public class ContactData implements Comparable<ContactData> {
+	private String id;
 	private String firstname;
 	private String lastname;
 	private String address;
@@ -15,6 +16,7 @@ public class ContactData implements Comparable<ContactData> {
 	private String groupfield;
 	private String optionaladdress;
 	private String optionalhomephone;
+
 
 	public String getFirstname() {
 		return firstname;
@@ -70,6 +72,74 @@ public class ContactData implements Comparable<ContactData> {
 
 	public String getOptionalhomephone() {
 		return optionalhomephone;
+	}
+	
+	//+++++++++++++
+	public String getId() {
+		// TODO Auto-generated method stub
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	
+	
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setHomephone(String homephone) {
+		this.homephone = homephone;
+	}
+
+	public void setMobilephone(String mobilephone) {
+		this.mobilephone = mobilephone;
+	}
+
+	public void setWorkphone(String workphone) {
+		this.workphone = workphone;
+	}
+
+	public void setMail1(String mail1) {
+		this.mail1 = mail1;
+	}
+
+	public void setMail2(String mail2) {
+		this.mail2 = mail2;
+	}
+
+	public void setBday(String bday) {
+		this.bday = bday;
+	}
+
+	public void setBmonth(String bmonth) {
+		this.bmonth = bmonth;
+	}
+
+	public void setByear(String byear) {
+		this.byear = byear;
+	}
+
+	public void setGroupfield(String groupfield) {
+		this.groupfield = groupfield;
+	}
+
+	public void setOptionaladdress(String optionaladdress) {
+		this.optionaladdress = optionaladdress;
+	}
+
+	public void setOptionalhomephone(String optionalhomephone) {
+		this.optionalhomephone = optionalhomephone;
 	}
 
 	public ContactData() {
@@ -200,6 +270,13 @@ public class ContactData implements Comparable<ContactData> {
 		this.optionalhomephone = optionalhomephone;
 		return this;
 	}
+	
+	public ContactData withId(String id) {
+		this.id = id;
+		return this;
+	}
+
+
 	
 	
 }
