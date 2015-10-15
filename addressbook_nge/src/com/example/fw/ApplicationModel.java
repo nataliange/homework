@@ -10,12 +10,17 @@ public class ApplicationModel {
 	
 	private SortedListOf<GroupData> groups;
 	
+	
+	//public SortedListOf<GroupData> getGroups() {
+		//return groups;
+	//}
+	
 	public SortedListOf<GroupData> getGroups() {
-		return groups;
-	}
+			return groups = new SortedListOf<GroupData>(groups);
+		}
 	
 	public void setGroups(List<GroupData> listGroups) {
-		this.groups = new SortedListOf<GroupData>(groups);
+		this.groups = new SortedListOf<GroupData>(listGroups);
 		
 	}
 
