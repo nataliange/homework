@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
 <hibernate-mapping>
- <class name="com.example.tests.ContactData" table="contact_list">
- <id name="id" column="contact_id" ></id>
- <property name="firstname" column="contact_firstname" />
- <property name="lastname" column="contact_lastname" />
- <property name="address" column="contact_address" />
- <property name="homephone" column="contact_homephone" />
- <property name="mobilephone" column="contact_mobilephone" />
- <property name="workphone" column="contact_workphone" />
- <property name="mail1" column="contact_mail1" />
- <property name="mail2" column="contact_mail2" />
- <property name="bday" column="contact_bday" />
- <property name="bmonth" column="contact_bmonth" />
- <property name="byear" column="contact_byear" />
- <property name="groupfield" column="contact_groupfield" />
- <property name="optionaladdress" column="contact_optionaladdress" />
- <property name="optionalhomephone" column="contact_optionalhomephone" />
+ <class name="com.example.tests.ContactData" table="addressbook">
+ <id name="id" column="id" ></id>
+ <property name="firstname" column="firstname" />
+ <property name="lastname" column="lastname" />
+ <property name="address" column="address" />
+ <property name="homephone" column="home" />
+ <property name="mobilephone" column="mobile" />
+ <property name="workphone" column="work" />
+ <property name="mail1" column="email" />
+ <property name="mail2" column="email2" />
+ <property name="bday" column="bday" />
+ <property name="bmonth" column="bmonth" />
+ <property name="byear" column="byear" />
+
+ <property name="optionaladdress" column="address2" />
+ <property name="optionalhomephone" column="phone2" />
  </class>
 </hibernate-mapping>
 
