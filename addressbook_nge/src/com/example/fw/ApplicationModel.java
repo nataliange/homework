@@ -16,7 +16,7 @@ public class ApplicationModel {
 	//}
 	
 	public SortedListOf<GroupData> getGroups() {
-			return groups = new SortedListOf<GroupData>(groups);
+		return new SortedListOf<GroupData>(groups);
 		}
 	
 	public void setGroups(List<GroupData> listGroups) {

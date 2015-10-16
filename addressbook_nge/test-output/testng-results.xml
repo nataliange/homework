@@ -1,254 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="2" passed="0">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24298" started-at="2015-10-15T22:48:48Z" finished-at="2015-10-15T22:49:12Z">
+  <suite name="Default suite" duration-ms="4849" started-at="2015-10-16T11:28:16Z" finished-at="2015-10-16T11:28:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24298" started-at="2015-10-15T22:48:48Z" finished-at="2015-10-15T22:49:12Z">
-      <class name="com.example.tests.GroupCreation">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupCreation@103c25f]" name="setUp" is-config="true" duration-ms="4477" started-at="2015-10-16T00:48:48Z" finished-at="2015-10-16T00:48:52Z">
+    <test name="Default test" duration-ms="4849" started-at="2015-10-16T11:28:16Z" finished-at="2015-10-16T11:28:21Z">
+      <class name="com.example.tests.ContactCreation">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreation@18891c4]" name="setUp" is-config="true" duration-ms="4380" started-at="2015-10-16T13:28:16Z" finished-at="2015-10-16T13:28:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreation@103c25f]" name="testGroupCreationWithValidData" duration-ms="15899" started-at="2015-10-16T00:48:53Z" data-provider="groupsFromFile" finished-at="2015-10-16T00:49:09Z">
+        <test-method status="FAIL" signature="contactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreation@18891c4]" name="contactCreationWithValidData" duration-ms="72" started-at="2015-10-16T13:28:21Z" data-provider="contactsFromFile" finished-at="2015-10-16T13:28:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [groupname=test614761133, header=test201868958, footer=test687182228]]]>
+                <![CDATA[ContactData [firstname=test-1832269041]]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.hibernate.exception.SQLGrammarException">
             <message>
-              <![CDATA[
-Expected: <[GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test-7696145, footer=test1281546105], GroupData [groupname=, header=test-28933568, footer=test796209157], GroupData [groupname=, header=test1977153512, footer=test-282390619], GroupData [groupname=, header=test766007947, footer=test1463959822], GroupData [groupname=, header=test-869467770, footer=test-3394598], GroupData [groupname=, header=, footer=test-1605759156], GroupData [groupname=, header=test-127327364, footer=test-798428747], GroupData [groupname=, header=test254720562, footer=test1303111178], GroupData [groupname=, header=, footer=test-374812861], GroupData [groupname=, header=test-1163035059, footer=test-1659132907], GroupData [groupname=, header=test-1134162023, footer=test325688655], GroupData [groupname=, header=test-2094064914, footer=test-1733656698], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=test-1117940062, header=test172594901, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1128990657, header=, footer=], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1300029369, header=, footer=], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1408550444, header=, footer=], GroupData [groupname=test-1436371317, header=test-1045760595, footer=test30087163], GroupData [groupname=test-1437594474, header=, footer=test723868386], GroupData [groupname=test-1566963553, header=, footer=], GroupData [groupname=test-1573929601, header=test1515956214, footer=], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1694134686, header=, footer=], GroupData [groupname=test-2024271628, header=test1483143870, footer=test1739870918], GroupData [groupname=test-2128580035, header=test632894331, footer=test899278140], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-497976298, header=, footer=], GroupData [groupname=test-693446540, header=test-1340862444, footer=test249219309], GroupData [groupname=test1627849933, header=test1898495935, footer=test932229050], GroupData [groupname=test1680017773, header=test-1610649772, footer=], GroupData [groupname=test1746987500, header=, footer=test980733480], GroupData [groupname=test1847486759, header=test-1616925871, footer=test559446116], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test343725202, header=test256756338, footer=], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test520420552, header=, footer=test1217448102], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test933331072, header=, footer=]]]]><![CDATA[>
-     but: was <[GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test-7696145, footer=test1281546105], GroupData [groupname=, header=test-28933568, footer=test796209157], GroupData [groupname=, header=test1977153512, footer=test-282390619], GroupData [groupname=, header=test766007947, footer=test1463959822], GroupData [groupname=, header=test-869467770, footer=test-3394598], GroupData [groupname=, header=, footer=test-1605759156], GroupData [groupname=, header=test-127327364, footer=test-798428747], GroupData [groupname=, header=test254720562, footer=test1303111178], GroupData [groupname=, header=, footer=test-374812861], GroupData [groupname=, header=test-1163035059, footer=test-1659132907], GroupData [groupname=, header=test-1134162023, footer=test325688655], GroupData [groupname=, header=test-2094064914, footer=test-1733656698], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=test-1117940062, header=test172594901, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1128990657, header=, footer=], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1300029369, header=, footer=], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1408550444, header=, footer=], GroupData [groupname=test-1436371317, header=test-1045760595, footer=test30087163], GroupData [groupname=test-1437594474, header=, footer=test723868386], GroupData [groupname=test-1566963553, header=, footer=], GroupData [groupname=test-1573929601, header=test1515956214, footer=], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1694134686, header=, footer=], GroupData [groupname=test-2024271628, header=test1483143870, footer=test1739870918], GroupData [groupname=test-2128580035, header=test632894331, footer=test899278140], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-497976298, header=, footer=], GroupData [groupname=test-693446540, header=test-1340862444, footer=test249219309], GroupData [groupname=test1627849933, header=test1898495935, footer=test932229050], GroupData [groupname=test1680017773, header=test-1610649772, footer=], GroupData [groupname=test1746987500, header=, footer=test980733480], GroupData [groupname=test1847486759, header=test-1616925871, footer=test559446116], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test343725202, header=test256756338, footer=], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test520420552, header=, footer=test1217448102], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test933331072, header=, footer=]]><![CDATA[]]]]><![CDATA[>]]>
+              <![CDATA[Table 'addressbook.contact_list' doesn't exist]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 
-Expected: <[GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test-7696145, footer=test1281546105], GroupData [groupname=, header=test-28933568, footer=test796209157], GroupData [groupname=, header=test1977153512, footer=test-282390619], GroupData [groupname=, header=test766007947, footer=test1463959822], GroupData [groupname=, header=test-869467770, footer=test-3394598], GroupData [groupname=, header=, footer=test-1605759156], GroupData [groupname=, header=test-127327364, footer=test-798428747], GroupData [groupname=, header=test254720562, footer=test1303111178], GroupData [groupname=, header=, footer=test-374812861], GroupData [groupname=, header=test-1163035059, footer=test-1659132907], GroupData [groupname=, header=test-1134162023, footer=test325688655], GroupData [groupname=, header=test-2094064914, footer=test-1733656698], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=test-1117940062, header=test172594901, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1128990657, header=, footer=], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1300029369, header=, footer=], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1408550444, header=, footer=], GroupData [groupname=test-1436371317, header=test-1045760595, footer=test30087163], GroupData [groupname=test-1437594474, header=, footer=test723868386], GroupData [groupname=test-1566963553, header=, footer=], GroupData [groupname=test-1573929601, header=test1515956214, footer=], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1694134686, header=, footer=], GroupData [groupname=test-2024271628, header=test1483143870, footer=test1739870918], GroupData [groupname=test-2128580035, header=test632894331, footer=test899278140], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-497976298, header=, footer=], GroupData [groupname=test-693446540, header=test-1340862444, footer=test249219309], GroupData [groupname=test1627849933, header=test1898495935, footer=test932229050], GroupData [groupname=test1680017773, header=test-1610649772, footer=], GroupData [groupname=test1746987500, header=, footer=test980733480], GroupData [groupname=test1847486759, header=test-1616925871, footer=test559446116], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test343725202, header=test256756338, footer=], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test520420552, header=, footer=test1217448102], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test933331072, header=, footer=]]]]><![CDATA[>
-     but: was <[GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test-7696145, footer=test1281546105], GroupData [groupname=, header=test-28933568, footer=test796209157], GroupData [groupname=, header=test1977153512, footer=test-282390619], GroupData [groupname=, header=test766007947, footer=test1463959822], GroupData [groupname=, header=test-869467770, footer=test-3394598], GroupData [groupname=, header=, footer=test-1605759156], GroupData [groupname=, header=test-127327364, footer=test-798428747], GroupData [groupname=, header=test254720562, footer=test1303111178], GroupData [groupname=, header=, footer=test-374812861], GroupData [groupname=, header=test-1163035059, footer=test-1659132907], GroupData [groupname=, header=test-1134162023, footer=test325688655], GroupData [groupname=, header=test-2094064914, footer=test-1733656698], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=test-1117940062, header=test172594901, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1128990657, header=, footer=], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1300029369, header=, footer=], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1408550444, header=, footer=], GroupData [groupname=test-1436371317, header=test-1045760595, footer=test30087163], GroupData [groupname=test-1437594474, header=, footer=test723868386], GroupData [groupname=test-1566963553, header=, footer=], GroupData [groupname=test-1573929601, header=test1515956214, footer=], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1694134686, header=, footer=], GroupData [groupname=test-2024271628, header=test1483143870, footer=test1739870918], GroupData [groupname=test-2128580035, header=test632894331, footer=test899278140], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-497976298, header=, footer=], GroupData [groupname=test-693446540, header=test-1340862444, footer=test249219309], GroupData [groupname=test1627849933, header=test1898495935, footer=test932229050], GroupData [groupname=test1680017773, header=test-1610649772, footer=], GroupData [groupname=test1746987500, header=, footer=test980733480], GroupData [groupname=test1847486759, header=test-1616925871, footer=test559446116], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test343725202, header=test256756338, footer=], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test520420552, header=, footer=test1217448102], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test933331072, header=, footer=]]]]><![CDATA[>
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.junit.Assert.assertThat(Assert.java:865)
-	at org.junit.Assert.assertThat(Assert.java:832)
-	at com.example.tests.GroupCreation.testGroupCreationWithValidData(GroupCreation.java:49)
+              <![CDATA[org.hibernate.exception.SQLGrammarException: Table 'addressbook.contact_list' doesn't exist
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:82)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110)
+	at org.hibernate.engine.jdbc.internal.proxy.AbstractStatementProxyHandler.continueInvocation(AbstractStatementProxyHandler.java:129)
+	at org.hibernate.engine.jdbc.internal.proxy.AbstractProxyHandler.invoke(AbstractProxyHandler.java:81)
+	at com.sun.proxy.$Proxy11.executeQuery(Unknown Source)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2031)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1832)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1811)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:899)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:341)
+	at org.hibernate.loader.Loader.doList(Loader.java:2516)
+	at org.hibernate.loader.Loader.doList(Loader.java:2502)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2332)
+	at org.hibernate.loader.Loader.list(Loader.java:2327)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:490)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:355)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:195)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1247)
+	at org.hibernate.internal.QueryImpl.list(QueryImpl.java:101)
+	at com.example.fw.HibernateHelper.listContacts(HibernateHelper.java:36)
+	at com.example.tests.ContactCreation.contactCreationWithValidData(ContactCreation.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -273,262 +72,49 @@ Expected: <[GroupData [groupname=, header=, footer=], GroupData [groupname=, hea
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'addressbook.contact_list' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:400)
+	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3847)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3783)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2447)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2594)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1901)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2002)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.hibernate.engine.jdbc.internal.proxy.AbstractStatementProxyHandler.continueInvocation(AbstractStatementProxyHandler.java:122)
+	... 42 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.hibernate.exception.SQLGrammarException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="FAIL" signature="testGroupCreationWithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreation@103c25f]" name="testGroupCreationWithValidData" duration-ms="2182" started-at="2015-10-16T00:49:09Z" data-provider="groupsFromFile" finished-at="2015-10-16T00:49:11Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [groupname=test-1207430305, header=, footer=test-1199068333]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[
-Expected: <[GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test-7696145, footer=test1281546105], GroupData [groupname=, header=test-28933568, footer=test796209157], GroupData [groupname=, header=test1977153512, footer=test-282390619], GroupData [groupname=, header=test766007947, footer=test1463959822], GroupData [groupname=, header=test-869467770, footer=test-3394598], GroupData [groupname=, header=, footer=test-1605759156], GroupData [groupname=, header=test-127327364, footer=test-798428747], GroupData [groupname=, header=test254720562, footer=test1303111178], GroupData [groupname=, header=, footer=test-374812861], GroupData [groupname=, header=test-1163035059, footer=test-1659132907], GroupData [groupname=, header=test-1134162023, footer=test325688655], GroupData [groupname=, header=test-2094064914, footer=test-1733656698], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=test-1117940062, header=test172594901, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1128990657, header=, footer=], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1300029369, header=, footer=], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1408550444, header=, footer=], GroupData [groupname=test-1436371317, header=test-1045760595, footer=test30087163], GroupData [groupname=test-1437594474, header=, footer=test723868386], GroupData [groupname=test-1566963553, header=, footer=], GroupData [groupname=test-1573929601, header=test1515956214, footer=], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1694134686, header=, footer=], GroupData [groupname=test-2024271628, header=test1483143870, footer=test1739870918], GroupData [groupname=test-2128580035, header=test632894331, footer=test899278140], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-497976298, header=, footer=], GroupData [groupname=test-693446540, header=test-1340862444, footer=test249219309], GroupData [groupname=test1627849933, header=test1898495935, footer=test932229050], GroupData [groupname=test1680017773, header=test-1610649772, footer=], GroupData [groupname=test1746987500, header=, footer=test980733480], GroupData [groupname=test1847486759, header=test-1616925871, footer=test559446116], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test343725202, header=test256756338, footer=], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test520420552, header=, footer=test1217448102], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test933331072, header=, footer=]]]]><![CDATA[>
-     but: was <[GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test-7696145, footer=test1281546105], GroupData [groupname=, header=test-28933568, footer=test796209157], GroupData [groupname=, header=test1977153512, footer=test-282390619], GroupData [groupname=, header=test766007947, footer=test1463959822], GroupData [groupname=, header=test-869467770, footer=test-3394598], GroupData [groupname=, header=, footer=test-1605759156], GroupData [groupname=, header=test-127327364, footer=test-798428747], GroupData [groupname=, header=test254720562, footer=test1303111178], GroupData [groupname=, header=, footer=test-374812861], GroupData [groupname=, header=test-1163035059, footer=test-1659132907], GroupData [groupname=, header=test-1134162023, footer=test325688655], GroupData [groupname=, header=test-2094064914, footer=test-1733656698], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=test-1117940062, header=test172594901, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1128990657, header=, footer=], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1300029369, header=, footer=], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1408550444, header=, footer=], GroupData [groupname=test-1436371317, header=test-1045760595, footer=test30087163], GroupData [groupname=test-1437594474, header=, footer=test723868386], GroupData [groupname=test-1566963553, header=, footer=], GroupData [groupname=test-1573929601, header=test1515956214, footer=], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1694134686, header=, footer=], GroupData [groupname=test-2024271628, header=test1483143870, footer=test1739870918], GroupData [groupname=test-2128580035, header=test632894331, footer=test899278140], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-497976298, header=, footer=], GroupData [groupname=test-693446540, header=test-1340862444, footer=test249219309], GroupData [groupname=test1627849933, header=test1898495935, footer=test932229050], GroupData [groupname=test1680017773, header=test-1610649772, footer=], GroupData [groupname=test1746987500, header=, footer=test980733480], GroupData [groupname=test1847486759, header=test-1616925871, footer=test559446116], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test343725202, header=test256756338, footer=], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test520420552, header=, footer=test1217448102], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test933331072, header=, footer=]]><![CDATA[]]]]><![CDATA[>]]>
-            </message>
+        </test-method> <!-- contactCreationWithValidData -->
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreation@18891c4]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-10-16T13:28:21Z" finished-at="2015-10-16T13:28:21Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 
-Expected: <[GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test-7696145, footer=test1281546105], GroupData [groupname=, header=test-28933568, footer=test796209157], GroupData [groupname=, header=test1977153512, footer=test-282390619], GroupData [groupname=, header=test766007947, footer=test1463959822], GroupData [groupname=, header=test-869467770, footer=test-3394598], GroupData [groupname=, header=, footer=test-1605759156], GroupData [groupname=, header=test-127327364, footer=test-798428747], GroupData [groupname=, header=test254720562, footer=test1303111178], GroupData [groupname=, header=, footer=test-374812861], GroupData [groupname=, header=test-1163035059, footer=test-1659132907], GroupData [groupname=, header=test-1134162023, footer=test325688655], GroupData [groupname=, header=test-2094064914, footer=test-1733656698], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=test-1117940062, header=test172594901, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1128990657, header=, footer=], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1300029369, header=, footer=], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1408550444, header=, footer=], GroupData [groupname=test-1436371317, header=test-1045760595, footer=test30087163], GroupData [groupname=test-1437594474, header=, footer=test723868386], GroupData [groupname=test-1566963553, header=, footer=], GroupData [groupname=test-1573929601, header=test1515956214, footer=], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1694134686, header=, footer=], GroupData [groupname=test-2024271628, header=test1483143870, footer=test1739870918], GroupData [groupname=test-2128580035, header=test632894331, footer=test899278140], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-497976298, header=, footer=], GroupData [groupname=test-693446540, header=test-1340862444, footer=test249219309], GroupData [groupname=test1627849933, header=test1898495935, footer=test932229050], GroupData [groupname=test1680017773, header=test-1610649772, footer=], GroupData [groupname=test1746987500, header=, footer=test980733480], GroupData [groupname=test1847486759, header=test-1616925871, footer=test559446116], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test343725202, header=test256756338, footer=], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test520420552, header=, footer=test1217448102], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test933331072, header=, footer=]]]]><![CDATA[>
-     but: was <[GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test-7696145, footer=test1281546105], GroupData [groupname=, header=test-28933568, footer=test796209157], GroupData [groupname=, header=test1977153512, footer=test-282390619], GroupData [groupname=, header=test766007947, footer=test1463959822], GroupData [groupname=, header=test-869467770, footer=test-3394598], GroupData [groupname=, header=, footer=test-1605759156], GroupData [groupname=, header=test-127327364, footer=test-798428747], GroupData [groupname=, header=test254720562, footer=test1303111178], GroupData [groupname=, header=, footer=test-374812861], GroupData [groupname=, header=test-1163035059, footer=test-1659132907], GroupData [groupname=, header=test-1134162023, footer=test325688655], GroupData [groupname=, header=test-2094064914, footer=test-1733656698], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=, footer=], GroupData [groupname=, header=test1522834217
-    test
-    test
-    test, footer=test1658245757
-    test
-    test
-    test], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=, header=test1192129799, footer=test-443108419], GroupData [groupname=test-1117940062, header=test172594901, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1123208261, header=test-557351186, footer=], GroupData [groupname=test-1128990657, header=, footer=], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1207430305, header=, footer=test-1199068333], GroupData [groupname=test-1300029369, header=, footer=], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1384737610, header=, footer=test-702403403], GroupData [groupname=test-1408550444, header=, footer=], GroupData [groupname=test-1436371317, header=test-1045760595, footer=test30087163], GroupData [groupname=test-1437594474, header=, footer=test723868386], GroupData [groupname=test-1566963553, header=, footer=], GroupData [groupname=test-1573929601, header=test1515956214, footer=], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1637551179, header=test1453195656, footer=test-2129281770], GroupData [groupname=test-1694134686, header=, footer=], GroupData [groupname=test-2024271628, header=test1483143870, footer=test1739870918], GroupData [groupname=test-2128580035, header=test632894331, footer=test899278140], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-483572946, header=test834150579, footer=test-2080528846], GroupData [groupname=test-497976298, header=, footer=], GroupData [groupname=test-693446540, header=test-1340862444, footer=test249219309], GroupData [groupname=test1627849933, header=test1898495935, footer=test932229050], GroupData [groupname=test1680017773, header=test-1610649772, footer=], GroupData [groupname=test1746987500, header=, footer=test980733480], GroupData [groupname=test1847486759, header=test-1616925871, footer=test559446116], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1909396955, header=, footer=], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test1918839251, header=test1842561135, footer=test-1038902779], GroupData [groupname=test343725202, header=test256756338, footer=], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test394729740, header=test1649260225, footer=test1035273187], GroupData [groupname=test520420552, header=, footer=test1217448102], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test614761133, header=test201868958, footer=test687182228], GroupData [groupname=test933331072, header=, footer=]]]]><![CDATA[>
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.junit.Assert.assertThat(Assert.java:865)
-	at org.junit.Assert.assertThat(Assert.java:832)
-	at com.example.tests.GroupCreation.testGroupCreationWithValidData(GroupCreation.java:49)
+              <![CDATA[java.lang.NullPointerException
+	at com.example.fw.ApplicationManager.stop(ApplicationManager.java:33)
+	at com.example.tests.TestBase.tearDown(TestBase.java:48)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.afterRun(TestRunner.java:1014)
+	at org.testng.TestRunner.run(TestRunner.java:621)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
@@ -543,15 +129,11 @@ Expected: <[GroupData [groupname=, header=, footer=], GroupData [groupname=, hea
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupCreation@103c25f]" name="tearDown" is-config="true" duration-ms="1275" started-at="2015-10-16T00:49:11Z" finished-at="2015-10-16T00:49:12Z">
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.GroupCreation -->
+      </class> <!-- com.example.tests.ContactCreation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

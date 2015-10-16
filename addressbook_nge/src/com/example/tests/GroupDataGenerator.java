@@ -9,10 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.testng.annotations.DataProvider;
+
 import com.thoughtworks.xstream.XStream;
 
 public class GroupDataGenerator {
 
+	@DataProvider
 	public static void main(String[] args) throws IOException {
 		if (args.length<3) 
 		{System.out.println("Please specify parameters: <amount of test data> <file> <format>");
