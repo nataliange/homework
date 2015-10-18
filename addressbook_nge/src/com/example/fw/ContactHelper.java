@@ -75,7 +75,7 @@ cachedContacts = new SortedListOf<ContactData>();
 	}
 	//++
 	public ContactHelper deleteContactById(String id) {
-		initContactModificationByIndex(id);
+		initContactModificationById(id);
 		submitContactDeletion();
 		returnToHomePage();
 		rebuildCache();
@@ -86,10 +86,12 @@ cachedContacts = new SortedListOf<ContactData>();
 	//-------------------------------------------------------------------------
 	
 	//+++
-	private ContactHelper initContactModificationByIndex(String id) {
-		click(By.xpath("//tr[@name='entry']/td/a/img[@title='Edit']"));
+	private ContactHelper initContactModificationById(String id) {
+		//click(By.xpath("//tr[@name='entry']/td/a/img[@title='Edit']"));
+		click (By.cssSelector("a[href*='edit.php?id=']"));
 		return this;
 	}
+	
 	
 	public ContactHelper initContactCreation() {
 		click(By.linkText("add new"));
